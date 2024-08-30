@@ -17,6 +17,15 @@ function updateTime() {
   tokyoTimeElement.innerHTML = tokyoTime.format(
     "[<strong>]h:mm:ss [</strong>][<small>]A[</small>]"
   );
+  let mauritiusElement = document.querySelector("#mauritius");
+  let mauritiusDateElement = mauritiusElement.querySelector(".date");
+  let mauritiusTimeElement = mauritiusElement.querySelector(".time");
+
+  let mauritiusTime = moment().tz("Indian/Mauritius");
+  mauritiusDateElement.innerHTML = mauritiusTime.format("MMMM Do YYYY");
+  mauritiusTimeElement.innerHTML = mauritiusTime.format(
+    "[<strong>]h:mm:ss [</strong>][<small>]A[</small>]"
+  );
 }
 
 function updateCity(event) {
